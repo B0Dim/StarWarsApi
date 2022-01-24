@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		08288001279F12AD00D53C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08288000279F12AD00D53C97 /* AppDelegate.swift */; };
 		08288003279F12AD00D53C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08288002279F12AD00D53C97 /* SceneDelegate.swift */; };
-		08288005279F12AD00D53C97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08288004279F12AD00D53C97 /* ViewController.swift */; };
 		08288008279F12AD00D53C97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08288006279F12AD00D53C97 /* Main.storyboard */; };
 		0828800A279F12AE00D53C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08288009279F12AE00D53C97 /* Assets.xcassets */; };
 		0828800D279F12AE00D53C97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0828800B279F12AE00D53C97 /* LaunchScreen.storyboard */; };
+		0828801B279F14F200D53C97 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828801A279F14F200D53C97 /* AboutViewController.swift */; };
+		0828801D279F150D00D53C97 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828801C279F150D00D53C97 /* HeroesViewController.swift */; };
+		0828801F279F151F00D53C97 /* Heroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828801E279F151F00D53C97 /* Heroes.swift */; };
+		08288021279F192F00D53C97 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08288020279F192F00D53C97 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		08287FFD279F12AD00D53C97 /* StarWarsApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08288000279F12AD00D53C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08288002279F12AD00D53C97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		08288004279F12AD00D53C97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		08288007279F12AD00D53C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08288009279F12AE00D53C97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0828800C279F12AE00D53C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0828800E279F12AE00D53C97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0828801A279F14F200D53C97 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		0828801C279F150D00D53C97 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
+		0828801E279F151F00D53C97 /* Heroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroes.swift; sourceTree = "<group>"; };
+		08288020279F192F00D53C97 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,66 @@
 		08287FFF279F12AD00D53C97 /* StarWarsApi */ = {
 			isa = PBXGroup;
 			children = (
-				08288000279F12AD00D53C97 /* AppDelegate.swift */,
-				08288002279F12AD00D53C97 /* SceneDelegate.swift */,
-				08288004279F12AD00D53C97 /* ViewController.swift */,
-				08288006279F12AD00D53C97 /* Main.storyboard */,
-				08288009279F12AE00D53C97 /* Assets.xcassets */,
-				0828800B279F12AE00D53C97 /* LaunchScreen.storyboard */,
-				0828800E279F12AE00D53C97 /* Info.plist */,
+				08288019279F148200D53C97 /* Services */,
+				08288014279F12B300D53C97 /* App */,
+				08288018279F12D100D53C97 /* StoryBoards */,
+				08288015279F12BB00D53C97 /* Model */,
+				08288017279F12C800D53C97 /* ViewControllers */,
+				08288016279F12C100D53C97 /* Resources */,
 			);
 			path = StarWarsApi;
+			sourceTree = "<group>";
+		};
+		08288014279F12B300D53C97 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				08288000279F12AD00D53C97 /* AppDelegate.swift */,
+				08288002279F12AD00D53C97 /* SceneDelegate.swift */,
+				0828800E279F12AE00D53C97 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		08288015279F12BB00D53C97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0828801E279F151F00D53C97 /* Heroes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		08288016279F12C100D53C97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				08288009279F12AE00D53C97 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		08288017279F12C800D53C97 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0828801A279F14F200D53C97 /* AboutViewController.swift */,
+				0828801C279F150D00D53C97 /* HeroesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		08288018279F12D100D53C97 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				08288006279F12AD00D53C97 /* Main.storyboard */,
+				0828800B279F12AE00D53C97 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		08288019279F148200D53C97 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				08288020279F192F00D53C97 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08288005279F12AD00D53C97 /* ViewController.swift in Sources */,
+				08288021279F192F00D53C97 /* NetworkManager.swift in Sources */,
+				0828801B279F14F200D53C97 /* AboutViewController.swift in Sources */,
 				08288001279F12AD00D53C97 /* AppDelegate.swift in Sources */,
+				0828801D279F150D00D53C97 /* HeroesViewController.swift in Sources */,
 				08288003279F12AD00D53C97 /* SceneDelegate.swift in Sources */,
+				0828801F279F151F00D53C97 /* Heroes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +351,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4HS4K74US2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StarWarsApi/Info.plist;
+				INFOPLIST_FILE = StarWarsApi/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +379,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4HS4K74US2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StarWarsApi/Info.plist;
+				INFOPLIST_FILE = StarWarsApi/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
