@@ -9,10 +9,7 @@ import Foundation
 
 class NetworkManager {
     static let shared = NetworkManager()
-    
-    //Прочитал тут, но не особо понял, как это работает. Со сбегающими замыкания у меня оч плохо, не понимаю их.
-    //https://malcolmkmd.medium.com/writing-network-layer-in-swift-protocol-oriented-approach-4fa40ef1f908
-    
+
     func fetchDataHeroes(_ completion: @escaping ([Heroes]) -> Void) {
         let publicApi = "https://www.swapi.tech/api/people"
         guard let url = URL(string: publicApi) else { return }
