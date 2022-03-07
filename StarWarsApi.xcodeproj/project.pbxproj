@@ -16,6 +16,10 @@
 		0828801D279F150D00D53C97 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828801C279F150D00D53C97 /* HeroesViewController.swift */; };
 		0828801F279F151F00D53C97 /* Heroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828801E279F151F00D53C97 /* Heroes.swift */; };
 		08288021279F192F00D53C97 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08288020279F192F00D53C97 /* NetworkManager.swift */; };
+		0886BB7A27D63E15006CAAB4 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886BB7927D63E15006CAAB4 /* AboutViewModel.swift */; };
+		0886BB7C27D63E25006CAAB4 /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886BB7B27D63E25006CAAB4 /* HeroesViewModel.swift */; };
+		0886BB7E27D64654006CAAB4 /* HeroesCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886BB7D27D64654006CAAB4 /* HeroesCellViewModel.swift */; };
+		0886BB8027D64674006CAAB4 /* HeroesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886BB7F27D64674006CAAB4 /* HeroesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		0828801C279F150D00D53C97 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
 		0828801E279F151F00D53C97 /* Heroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroes.swift; sourceTree = "<group>"; };
 		08288020279F192F00D53C97 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0886BB7927D63E15006CAAB4 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
+		0886BB7B27D63E25006CAAB4 /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
+		0886BB7D27D64654006CAAB4 /* HeroesCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCellViewModel.swift; sourceTree = "<group>"; };
+		0886BB7F27D64674006CAAB4 /* HeroesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +109,8 @@
 		08288017279F12C800D53C97 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0828801A279F14F200D53C97 /* AboutViewController.swift */,
-				0828801C279F150D00D53C97 /* HeroesViewController.swift */,
+				0886BB7827D63DF3006CAAB4 /* Heroes */,
+				0886BB7727D63DE9006CAAB4 /* About */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -122,6 +130,34 @@
 				08288020279F192F00D53C97 /* NetworkManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0886BB7727D63DE9006CAAB4 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				0828801A279F14F200D53C97 /* AboutViewController.swift */,
+				0886BB7927D63E15006CAAB4 /* AboutViewModel.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		0886BB7827D63DF3006CAAB4 /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				0886BB8127D646CF006CAAB4 /* Cell */,
+				0828801C279F150D00D53C97 /* HeroesViewController.swift */,
+				0886BB7B27D63E25006CAAB4 /* HeroesViewModel.swift */,
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
+		0886BB8127D646CF006CAAB4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0886BB7F27D64674006CAAB4 /* HeroesCell.swift */,
+				0886BB7D27D64654006CAAB4 /* HeroesCellViewModel.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,8 +232,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				08288021279F192F00D53C97 /* NetworkManager.swift in Sources */,
+				0886BB7A27D63E15006CAAB4 /* AboutViewModel.swift in Sources */,
+				0886BB7C27D63E25006CAAB4 /* HeroesViewModel.swift in Sources */,
+				0886BB7E27D64654006CAAB4 /* HeroesCellViewModel.swift in Sources */,
 				0828801B279F14F200D53C97 /* AboutViewController.swift in Sources */,
 				08288001279F12AD00D53C97 /* AppDelegate.swift in Sources */,
+				0886BB8027D64674006CAAB4 /* HeroesCell.swift in Sources */,
 				0828801D279F150D00D53C97 /* HeroesViewController.swift in Sources */,
 				08288003279F12AD00D53C97 /* SceneDelegate.swift in Sources */,
 				0828801F279F151F00D53C97 /* Heroes.swift in Sources */,

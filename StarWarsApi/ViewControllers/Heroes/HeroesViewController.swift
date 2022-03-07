@@ -11,15 +11,24 @@ class HeroesViewController: UITableViewController {
 
     var heroes: [Heroes] = []
     
+    private var viewModel: HeroesViewModelProtocol! {
+        didSet {
+            viewModel.fetchHeroes {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        sendRequest()
+        viewModel = HeroesViewModel()
     }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        heroes.count
+        viewModel.numberOfRows()
     }
 
     
@@ -27,32 +36,24 @@ class HeroesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         var content = cell.defaultContentConfiguration()
-        content.text = heroes[indexPath.row].name ?? ""
+        content.text = viewModel.cellViewModel(at: indexPath).heroName
         cell.contentConfiguration = content
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let aboutViewModel = viewModel.aboutViewModel(at: indexPath)
+        performSegue(withIdentifier: "AboutVC", sender: aboutViewModel)
     }
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let AboutVC = segue.destination as? AboutViewController else { return }
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        AboutVC.url = heroes[indexPath.row].url
+        AboutVC.viewModel = sender as? AboutViewModelProtocol
     }
     
 
 }
 
-//MARK: Private methods
-extension HeroesViewController {
-    
-    private func sendRequest() {
-        
-        NetworkManager.shared.fetchDataHeroes { heroes in
-            DispatchQueue.main.async {
-                self.heroes = heroes
-                self.tableView.reloadData()
-            }
-        }
-    }
-}

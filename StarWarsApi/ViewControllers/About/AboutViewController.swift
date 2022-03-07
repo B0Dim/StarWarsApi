@@ -12,25 +12,21 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var aboutDetailLabel: UILabel!
     
     var url: String!
-    var hero: Hero?
+    var viewModel: AboutViewModelProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       sendRequest()
-    }
-    
-    private func sendRequest() {
-        NetworkManager.shared.fetchDataHero(url: url) { hero in
+        print(viewModel.url)
+        viewModel.fetchHero { [weak self] in
             DispatchQueue.main.async {
-                self.hero = hero.result.properties
-                self.setAboutData()
+                self?.setAboutData()
             }
         }
     }
+
     
     private func setAboutData() {
-        aboutDetailLabel.text = hero?.description
+        aboutDetailLabel.text = viewModel.hero?.description
     }
 
 }

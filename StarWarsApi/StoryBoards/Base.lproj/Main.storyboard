@@ -24,9 +24,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="F7u-SP-Zf4" kind="show" id="cAD-IA-FvZ"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -35,10 +32,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Star Wars" id="hUn-15-6tB"/>
+                    <connections>
+                        <segue destination="F7u-SP-Zf4" kind="show" identifier="AboutVC" destinationCreationSelector="AboutVC" id="iA0-Co-3XE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DUG-qn-XSS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="74"/>
+            <point key="canvasLocation" x="800" y="74"/>
         </scene>
         <!--About-->
         <scene sceneID="Cgz-Wx-rKM">
